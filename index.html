@@ -11,10 +11,18 @@
 "/>
   </head>
 
-	<body>   
-<strong>  Introduction to Information Systems </strong> 
+	<body onload="welcomeFunction(); document.body.style.backgroundColor = 'pink'"
+	onresize="document.body.style.backgroundColor = 'lightblue'"
 
-		<p class = "centered"> 
+	onkeydown="document.body.style.backgroundColor = 'white'"
+	onkeyup="document.body.style.backgroundColor = 'lightyellow'">   
+<strong>  Introduction to Information Systems </strong> 
+		<script>
+			function welcomeFunction() {
+				alert("Welcome!");
+			}
+		</script>
+		<p class = "centered" onmouseover="document.guerySelector('.centered').style.font='bold 20pt arial,serif'"> 
 				<em> Hacer Akinci
 				           <br> 
                    150200007
@@ -25,19 +33,21 @@
 					Evolution of Homo sapiens 
     </p>
 
-		<ul> 
+		<ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundcolor='purple'"> 
 			     <li> Homo habilis (able man) </li>
 		  	     <li> Homo erectus (upright main) </li>
 			     <li> Homo neanderthalensis </li>
 			     <li> Homo floesiensis (hobbit) </li>
 			     <li> Homo sapiens(wise man) </li>
-			            <ul> 
+			            <ul id="insideUL" onclick="document.getElementById('insideUL').style.backgroundColor='orange'"> 
 					<li> Homo sapeins sapiens </li>
 				</ul>
 		</ul>
 			     
 		
-     <h1> <strong> Human Evolution </strong> </h1>
+     <h1 onmouseover="style.color='orange';style.backgroundColor='lightgreen'"
+	 onmouseout="style.color='red';style.backgroundColor='white'"> 
+<strong> Human Evolution </strong> </h1>
      <p> <img src="evolution-diagram.png"> </p>
      <p> You can find the link of the image below.
         	<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"> Biology online </a>
@@ -45,7 +55,8 @@
     <p> 
 	<h2> <strong> Clickable Image </strong> </h2>
         	<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"> 
-           	<img src="evolution-diagram.png">
+           	<img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)"
+src="evolution-diagram.png"/>
   	</a>
    		This image is clikable, click on it and try.
  	</p>
